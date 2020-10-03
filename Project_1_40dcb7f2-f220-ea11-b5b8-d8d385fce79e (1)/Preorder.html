@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="designPreorder.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script> 
+    <script src="homeQuery.js"></script>
+<script>
+function validateForm() {
+
+  var unamE = document.forms["r7sForm"]["username"].value;
+  if (unamE == "") {
+    alert("Username must be filled out!");
+    return false;
+  }
+  
+  var emaiL = document.forms["r7sForm"]["email"].value;
+  if (emaiL == "") {
+    alert("Email must be filled out!");
+    return false;
+  }
+ 	var aKeong=emaiL.indexOf("@");  
+	var titik=emaiL.lastIndexOf(".");  
+	if (aKeong<1 || titik<aKeong+2 || titik+2>=emaiL.length){  
+  	alert("Please enter a valid e-mail address");  
+  	return false;  
+ 	}
+  
+  var passworD = document.forms["r7sForm"]["password"].value;
+  if (passworD == "") {
+    alert("Password must be filled out!");
+    return false;
+  }
+  
+  var repassworD = document.forms["r7sForm"]["rePassword"].value;
+  if (repassworD == "") {
+    alert("Re-enter Password must be filled out!");
+    return false;
+  }
+  
+  if(repassworD!=passworD)
+  {
+  	alert("Password and Re-enter Password must be same!\nDid you forgot your password in that split second?!");
+    return false;
+  }
+  
+  var addresS = document.forms["r7sForm"]["address"].value;
+  if (addresS == "") {
+    alert("Adress must be filled out!\nHow could we send the copies!?!");
+    return false;
+  }
+  
+  if (addresS.length < 5) {
+    alert("Are you sure your address is that short?\nTry again please!");
+    return false;
+  }
+  
+  var numbeR = document.forms["r7sForm"]["number"].value;
+  if (isNaN(numbeR)){  
+  document.getElementById("numloc").innerHTML="Enter Numeric value only";  
+  return false;  
+  } 
+
+  if (numbeR == "" || numbeR<1) {
+  alert("you don't want any copies?\nDon't fill this form!");
+  return false;
+  }
+
+  var typE = document.forms["r7sForm"]["type"].value;
+  if (typE == "") {
+  alert("Type of Game must be filled out!");
+  return false;
+  } 
+
+  var typE = document.forms["r7sForm"]["type"].value;
+  if (typE == "") {
+  alert("Type of Game must be filled out!");
+  return false;
+  }
+
+  var taS = document.forms["r7sForm"]["TaS"].checked;
+  if (taS == false) {
+  alert("Please Check our Terms and Agreement Services!");
+  return false;
+  }
+  
+  confirm("Do you really want to submit the form?");
+  return alert("Thank You For Pre-Order!");
+}
+</script>
+</head>
+<header>
+  <div class="Background"></div>
+  <a href="Home.html">
+  <img class="Image1" src ="AssetHCI/logo_R7Sterbaru.png">
+  </a>
+<div class = "wrapper">
+  <a class="DesignTulisan" href="Operator.html">OPERATORS</a>
+  <a class="DesignTulisan2"href="Maps.html">MAPS</a>
+  <a class="DesignTulisan3"href="Quarantine.html">QUARANTINE</a>
+  <a class="DesignTulisan4"href="Preorder.html">PRE-ORDER</a>
+</div>
+</header>
+<body class="body">
+
+  <h2 class="PreorderForm">PRE-ORDER FORM</h2>
+</br>
+
+<form name="r7sForm" action="./Home.html" onsubmit="return validateForm()" method="post">
+  
+  <h1>
+  <p class="ptab">
+    <label for="a">Username:</label>
+    <input type="text" name="username">
+  </p>
+  <p class="ptab">
+    <label for="a">Email:</label>
+    <input type="text" name="email">
+  </p>
+  <p class="ptab">
+    <label for="a">Password:</label>
+    <input type="password" name="password">
+  </p>
+  <p class="ptab">
+    <label for="a">Re-enter Password:</label>
+    <input type="password" name="rePassword">
+  </p>
+  <p class="ptab">
+    <label for="a">Address:</label>
+    <input type="text" name="address">
+  </p>
+  <p class="ptab">
+    <label for="a">Number of Copies:</label>
+    <input type="text" name="number">
+    <span id="numloc"></span>
+  </p>
+  <p class="ptab">
+    <label for="a">Type of Game:</label>
+    <input type="text" name="type">
+  </p class="ptab">  
+  <input type="checkbox" id="TaS"> Terms and Service agreement
+  </br>
+  
+  </br>
+  <input class="button" type="submit" value="Submit">
+  </h1>
+</form>
+
+</body>
+<div class = "wrapper1">
+  <div class = "push"></div>
+</div>
+<footer class = "Footer">
+  <h1 class = "FindUs">FIND US ON</h1>
+  <img class = "twitter" src="AssetHCI/newtwitter.png" alt="">
+  <img class = "instagram" src="AssetHCI/newinstagram.png" alt="">
+  <img class = "facebook" src="AssetHCI/newfacebook.png" alt="">
+  <p class = "Ubipost">© 2020 Ubipost Entertainment. All Rights Reserved.</p>
+</footer>
+</html>

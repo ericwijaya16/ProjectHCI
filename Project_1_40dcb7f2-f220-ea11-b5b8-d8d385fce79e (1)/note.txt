@@ -1,0 +1,14 @@
+Website kami mengalami sedikit kendala pada bagian posisi tombol-tombol maupun kata-kata
+sehingga pada device tertentu akan terlihat berbeda posisinya
+pada pc eric websitenya bisa terlihat rapi, tetapi pada pc saya(Aloysius) websitenya
+perlu dizoomout dulu sampai 75% sehingga tampilannya sama seperti pada pc eric.
+Website yang kami buat, dibuat semirip mungkin dengan blueprint, sehingga jika ada
+perbedaan boleh dicoba untuk zoom out atau zoom in websitenya.
+
+Terima kasih sebelumnya.
+
+pada halaman Quarantine mouse perlu di hover ke gambar agar dapat menunjukan text mengenai 
+informasi dari Rainbow Seven Quarantine.
+
+Sama salah satu kelompok kami bernama Sandi tidak dapat dihubungi dan tidak ada kabarnya, jadi kami hanya mengerjakan
+tugas ini berdua.
